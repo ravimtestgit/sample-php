@@ -4,7 +4,7 @@ desiredCount: 1
 networkConfiguration:
   awsvpcConfiguration:
     subnets:
-      - <+input> # Harness will ask for your subnet IDs
+      - subnet-012345, subnet-67890abc, subnet-def1234
     securityGroups:
-      - <+input> # Harness will ask for your SG ID
+      - sg-0987654321, sg-1234567890
     assignPublicIp: ENABLED
