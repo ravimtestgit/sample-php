@@ -4,10 +4,10 @@ desiredCount: 1
 networkConfiguration:
   awsvpcConfiguration:
     subnets:
-      - subnet-012345
-      - subnet-67890abc
-      - subnet-def1234
+      - subnet-0db3fe5b28704e3fc
+      - subnet-08d96d6b4d6d3fe2c
+      - subnet-0831fb0f55c9befb7
     securityGroups:
-      - sg-0987654321
-      - sg-1234567890
+      - sg-0ac13866d8a0e5e4e
+      - sg-0d79403f3010d3649
     assignPublicIp: ENABLED
