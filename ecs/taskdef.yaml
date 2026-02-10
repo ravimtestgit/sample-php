@@ -1,20 +1,13 @@
-{
-  "family": "laravel-app-fargate",
-  "requiresCompatibilities": ["FARGATE"],
-  "networkMode": "awsvpc",
-  "cpu": "256",
-  "memory": "512",
-  "containerDefinitions": [
-    {
-      "name": "laravel-app",
-      "image": "<+artifact.image>",
-      "essential": true,
-      "portMappings": [
-        {
-          "containerPort": 80,
-          "protocol": "tcp"
-        }
-      ]
-    }
-  ]
-}
+family: laravel-app-fargate
+requiresCompatibilities:
+  - FARGATE
+networkMode: awsvpc
+cpu: "256"
+memory: "512"
+containerDefinitions:
+  - name: laravel-app
+    image: <+artifacts.primary.image>
+    essential: true
+    portMappings:
+      - containerPort: 80
+        protocol: tcp
