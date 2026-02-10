@@ -1,3 +1,4 @@
+serviceName: laravel
 launchType: FARGATE
 desiredCount: 1
 networkConfiguration:
