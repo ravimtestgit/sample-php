@@ -1,5 +1,9 @@
-launchType: EC2
+launchType: FARGATE
 desiredCount: 1
-deploymentConfiguration:
-  maximumPercent: 200
-  minimumHealthyPercent: 100
+networkConfiguration:
+  awsvpcConfiguration:
+    subnets:
+      - <+input> # Harness will ask for your subnet IDs
+    securityGroups:
+      - <+input> # Harness will ask for your SG ID
+    assignPublicIp: ENABLED
