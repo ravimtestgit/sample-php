@@ -1,25 +1,20 @@
-C{
+{
+  "family": "laravel-app-fargate",
+  "requiresCompatibilities": ["FARGATE"],
+  "networkMode": "awsvpc",
+  "cpu": "256",
+  "memory": "512",
   "containerDefinitions": [
     {
-      "name": "sample-php",
+      "name": "laravel-app",
       "image": "<+artifact.image>",
-      "cpu": 256,
-      "memory": 512,
       "essential": true,
       "portMappings": [
         {
           "containerPort": 80,
-          "hostPort": 80,
           "protocol": "tcp"
         }
       ]
     }
-  ],
-  "family": "laravel-task-family",
-  "networkMode": "bridge",
-  "requiresCompatibilities": [
-    "EC2"
-  ],
-  "cpu": "256",
-  "memory": "512"
+  ]
 }
