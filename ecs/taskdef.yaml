@@ -4,6 +4,7 @@ requiresCompatibilities:
 networkMode: awsvpc
 cpu: "256"
 memory: "512"
+"executionRoleArn": "arn:aws:iam::491085423717:role/ecsTaskExecutionRole"
 containerDefinitions:
   - name: laravel-app
     image: <+artifacts.primary.image>
